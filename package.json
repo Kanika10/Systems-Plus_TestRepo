@@ -1,0 +1,22 @@
+{
+  "name": "systems-plus_testrepo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kanika10/Systems-Plus_TestRepo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Kanika10/Systems-Plus_TestRepo/issues"
+  },
+  "homepage": "https://github.com/Kanika10/Systems-Plus_TestRepo#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.51.1",
+    "@types/node": "^22.14.1"
+  }
+}
