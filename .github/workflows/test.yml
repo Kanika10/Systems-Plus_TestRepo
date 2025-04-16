@@ -29,6 +29,10 @@ jobs:
             libgstreamer-plugins-bad1.0-0 \
             libavif16
 
+      - name: Install Playwright dependencies
+        run: |
+          npx playwright install-deps
+
       - name: Install Node.js dependencies
         run: |
           npm install
@@ -36,4 +40,4 @@ jobs:
       - name: Run Playwright tests
         run: |
           npx playwright install
-          npx playwright test tests/search.test.js
+          npx playwright test "tests/search.test.js"
