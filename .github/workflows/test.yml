@@ -40,4 +40,4 @@ jobs:
       - name: Run Playwright tests
         run: |
           npx playwright install
-          npx playwright test 'Systems-Plus_TestRepo/tests/*.test.js'
+          npx playwright test './Systems-Plus_TestRepo/tests/**/*.test.js' --reporter=html --workers=1
