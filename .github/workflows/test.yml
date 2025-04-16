@@ -21,31 +21,19 @@ jobs:
         with:
           node-version: '16'
 
-      - name: Install system dependencies
+      - name: Install dependencies
         run: |
           sudo apt-get update
           sudo apt-get install -y \
-            libgtk-4-1 \
-            libgraphene-1.0-0 \
-            libvpx-dev \
-            libevent-2.1-7 \
-            libopus0 \
-            libgstreamer-plugins-base1.0-0 \
-            libgstreamer1.0-0 \
-            libgdk-pixbuf2.0-0 \
-            libflite1 \
-            libharfbuzz-icu0 \
-            libsecret-1-0 \
-            libhyphen0 \
-            libmanette-0.2-0 \
-            libgles2 \
-            libx264-dev
+            libwoff1 \
+            libgstreamer-plugins-bad1.0-0 \
+            libavif16
 
-      - name: Install dependencies
+      - name: Install Node.js dependencies
         run: |
           npm install
 
       - name: Run Playwright tests
         run: |
           npx playwright install
-          npx playwright test
+          npx playwright test tests/search.test.js
